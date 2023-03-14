@@ -12,7 +12,7 @@ services:
       dockerfile: ./docker/frontend.Dockerfile
     restart: always
     volumes:
-      - mealie-data:/app/data/
+      - ../../mealie-data:/app/data/
     ports:
       - 9091:3000
     environment:
@@ -48,7 +48,7 @@ services:
       dockerfile: ./docker/api.Dockerfile
     restart: always
     volumes:
-      - mealie-data:/app/data/
+      - ../../mealie-data:/app/data/
     ports:
       - 9092:9000
     environment:
@@ -89,4 +89,4 @@ services:
 
 volumes:
   mealie-data:
-    driver: local
+    #    driver: local
